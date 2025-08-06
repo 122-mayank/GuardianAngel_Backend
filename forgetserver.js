@@ -8,6 +8,10 @@ const admin = require("./firebase"); // Firebase Admin
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.get("/", (req, res) => {
+  res.send("Server is live!");
+});
+
 
 // Middlewares
 app.use(cors());
